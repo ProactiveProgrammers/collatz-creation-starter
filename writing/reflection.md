@@ -21,6 +21,12 @@ TODO: Use a fenced code block to provide the output for this command.
 
 `poetry run collatzcreator --minimum 1 --maximum 100 --display`
 
+TODO: Although it is not absolutely required, try to run your program
+with the largest input value specified in the project description on the
+Project Euler web site. If you can get your program to produce the
+correct output, then include the output of the program in that
+configuration in an additional fenced code block.
+
 ## Source Code
 
 ### Describe in detail how the following source code works
