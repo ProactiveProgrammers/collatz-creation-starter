@@ -1,13 +1,13 @@
 # Collatz Chains
 
-## Assigned: Wednesday, November 17, 2021
-## Due: Wednesday, December 1, 2021
+## Assigned: Tuesday, April 26, 2022
+## Due: Tuesday, May May 33, 2022
 
 After cloning this repository to your computer, please take the following steps:
 
 - Follow the instructions on the Proactive Programmers web site for this project
 - Use the `cd` command to change into the directory for this repository.
-- Change into the program directory by typing `cd datauniquifier`.
+- Change into the program directory by typing `cd collatzcreator`.
 - Install the dependencies for the project by typing `poetry install`
 - Run the program with the correct input file by typing:
   - Run the program with few inputs: `poetry run collatzcreator --minimum 1 --maximum 10 --display`
