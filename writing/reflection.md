@@ -1,7 +1,9 @@
 # Collatz Chains
 
 TODO: Make sure that you delete all of the TODO markers and rephrase all
-of the prompts inside of this file. When you are finished working
+of the prompts inside of this file. When you are finished working on
+this technical writing it should contain polished content without any
+mistakes in Markdown syntax, spelling, or grammar.
 
 ## Add Your Name Here
 
