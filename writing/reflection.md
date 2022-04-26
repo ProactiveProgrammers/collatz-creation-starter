@@ -1,5 +1,8 @@
 # Collatz Chains
 
+TODO: Make sure that you delete all of the TODO markers and rephrase all
+of the prompts inside of this file. When you are 
+
 ## Add Your Name Here
 
 ## Program Input and Output
@@ -10,69 +13,11 @@ TODO: Use a fenced code block to provide the output for this command.
 
 `poetry run collatzcreator --minimum 1 --maximum 10 --display`
 
-```
-🕵  Let's investigate the behavior of the Collatz sequence!
-
-  The first input to try will be 1
-  The last input to try will be 10
-
-The inputs to the Collatz function:
-
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-✨ What is the length of the Collatz chain before the function produces the value of 1?
-
-📏 The length of the resulting Collatz chain:
-
-[1, 2, 8, 3, 6, 9, 17, 4, 20, 7]
-
-✨ What is the summary information about the length of the Collatz chain?
-
-  The minimum length of a Collatz chain is: 1
-  The maximum length of a Collatz chain is: 20
-  The mean of the length of a Collatz chain is: 7.70
-  The median of the length of a Collatz chain is: 6.50
-  The standard deviation of the length of a Collatz chain is: 5.97
-
-🤷 Can you find a pattern between the input number and the length of the Collatz chain?
-
-📦 Check the file called 'graphs/collatz.pdf' to see a graph that visualizes the results!
-```
-
 ### What is the output from running the following command?
 
 TODO: Use a fenced code block to provide the output for this command.
 
-`poetry run collatzcreator --minimum 1 --maximum 100`
-
-```
-🕵  Let's investigate the behavior of the Collatz sequence!
-
-  The first input to try will be 1
-  The last input to try will be 10
-
-The inputs to the Collatz function:
-
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-✨ What is the length of the Collatz chain before the function produces the value of 1?
-
-📏 The length of the resulting Collatz chain:
-
-[1, 2, 8, 3, 6, 9, 17, 4, 20, 7]
-
-✨ What is the summary information about the length of the Collatz chain?
-
-  The minimum length of a Collatz chain is: 1
-  The maximum length of a Collatz chain is: 20
-  The mean of the length of a Collatz chain is: 7.70
-  The median of the length of a Collatz chain is: 6.50
-  The standard deviation of the length of a Collatz chain is: 5.97
-
-🤷 Can you find a pattern between the input number and the length of the Collatz chain?
-
-📦 Check the file called 'graphs/collatz.pdf' to see a graph that visualizes the results!
-```
+`poetry run collatzcreator --minimum 1 --maximum 100 --display`
 
 ## Source Code
 
