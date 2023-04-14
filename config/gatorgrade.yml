@@ -65,13 +65,13 @@ setup: |
       fragment: TODO
       count: 0
       exact: true
-  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in main.py
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_collatz.py
     check: CountMultipleLineComments
     options:
       language: "Python"
       count: 2
       exact: false
-  - description: Create a sufficient number of single-line comments in main.py
+  - description: Create a sufficient number of single-line comments in test_collatz.py
     check: CountSingleLineComments
     options:
       language: "Python"
