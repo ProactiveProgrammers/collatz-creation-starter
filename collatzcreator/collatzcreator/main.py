@@ -32,7 +32,7 @@ def main(
     # if no list of numbers was specified through the (potentially repeated)
     # use of the "--number" command-line argument, then create a list of
     # values using the range for a specified minimum and maximum value
-    if collatz_inputs == []:
+    if not collatz_inputs:
         collatz_inputs = list(range(minimum, maximum + 1))
     # create an empty list that can store the length of the Collatz chain
     collatz_output_list_length = []
