@@ -35,22 +35,22 @@ configuration in an additional fenced code block.
 
 TODO: Use one paragraph to explain the aforementioned source code statement
 
-## Explain `number = number // 2`
+#### Explain `number = number // 2`
 
 TODO: Use one paragraph to explain the aforementioned source code statement
 
-## Explain the meaning and purpose of the following two lines of source code
+#### Explain the meaning and purpose of the following two lines of source code
 
-```
+```python
 numbers_internal = copy.deepcopy(numbers)
 numbers_internal.sort()
 ```
 
 TODO: Use one paragraph to explain the aforementioned source code segment
 
-## Use one paragraph to explain the meaning of the following test case
+#### Use one paragraph to explain the meaning of the following test case
 
-```
+```python
 def test_collatz_input_three():
     """Ensure that input of the number 3 produces the sequence suggested by Stavely on page 92."""
     number = 3
@@ -81,6 +81,6 @@ TODO: Provide a one paragraph response to this question
 
 TODO: Provide a one paragraph response to this question
 
-## At your own option, do you have any other insights to share about this assignment?
+### At your own option, do you have any other insights to share about this project?
 
 TODO: Provide a one paragraph response to this question
