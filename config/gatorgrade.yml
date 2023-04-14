@@ -1,0 +1,208 @@
+setup: |
+  cd collatzcreator && poetry install
+  echo "Done installing project dependencies!"
+---
+
+# --> check the Python program
+- collatzcreator/collatzcreator/main.py:
+  - description: Ensure that main.py file exists in the collatzcreator/collatzcreator/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for main.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in main.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in main.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 5
+      exact: false
+
+# --> check the Python program
+- collatzcreator/collatzcreator/collatz.py:
+  - description: Ensure that collatz.py file exists in the collatzcreator/collatzcreator/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for collatz.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Ensure that the collatz.py file contains at least two 'Option(None)' parameters
+    check: MatchFileFragment
+    options:
+      fragment: "number // 2"
+      count: 1
+      exact: false
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in collatz.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in collatz.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 7
+      exact: false
+
+# --> check the Python program
+- collatzcreator/tests/test_collatz.py:
+  - description: Ensure that test_collatz.py file exists in the collatzcreator/tests/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_collatz.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in main.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in main.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 5
+      exact: false
+
+# --> check the Python program
+- collatzcreator/collatzcreator/summarize.py:
+  - description: Ensure that summarize.py file exists in the collatzcreator/collatzcreator/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for summarize.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in summarize.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in summarize.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 7
+      exact: false
+
+# --> check the Python program
+- collatzcreator/tests/test_summarize.py:
+  - description: Ensure that test_summarize.py file exists in the collatzcreator/tests/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_summarize.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_summarize.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in test_summarize.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 10
+      exact: false
+
+# --> check the Python program
+- collatzcreator/graphs/collatz_100.pdf:
+  - description: Ensure that the 100-level input file exists in the graphs directory as a PDF
+    check: ConfirmFileExists
+
+# --> check the Python program
+- collatzcreator/graphs/collatz_1000.pdf:
+  - description: Ensure that the 1000-level input file exists in the graphs directory as a PDF
+    check: ConfirmFileExists
+
+# --> check the Python program
+- collatzcreator/graphs/collatz_10000.pdf:
+  - description: Ensure that the 10000-level input file exists in the graphs directory as a PDF
+    check: ConfirmFileExists
+
+# --> check the technical writing for various characteristics
+- writing/reflection.md:
+  - description: Ensure that the reflection.md file exists in the writing/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for reflection.md
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Delete the 'Add Your Name Here' prompt in the reflection file
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+  - description: Write a minimum number of meaningful words in the reflection
+    check: CountFileWords
+    options:
+      count: 500
+      exact: false
+  - description: Confirm that the markdown file has the correct number of headers
+    check: CountMarkdownTags
+    options:
+      tag: heading
+      count: 15
+      exact: false
+  - description: Confirm that the markdown file has the correct number of fenced code blocks
+    check: CountMarkdownTags
+    options:
+      tag: code_block
+      count: 4
+      exact: false
+
+# --> check that the number of commits in the Git repository is beyond a threshold
+- description: Have at least a specific minimum of commits in repository
+  check: CountCommits
+  options:
+    count: 10
+
+# run a command
+- description: Pass the source code formatting checks run by black
+  command: cd collatzcreator && poetry run task black
+
+# run a command
+- description: Pass the linting checks run by flake8
+  command: cd collatzcreator && poetry run task flake8
+
+# run a command
+- description: Pass the import checks run by isort
+  command: cd collatzcreator && poetry run task isort
+
+# run a command
+- description: Pass the linting checks run by mypy
+  command: cd collatzcreator && poetry run task mypy
+
+# run a command
+- description: Pass the linting checks run by pydocstyle
+  command: cd collatzcreator && poetry run task pydocstyle
+
+# run a command
+- description: Pass the linting checks run by pylint
+  command: cd collatzcreator && poetry run task pylint
+
+# run a command
+- description: Pass the linting checks run by pymarkdown
+  command: cd collatzcreator && poetry run task markdownlint
